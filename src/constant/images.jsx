@@ -20,5 +20,6 @@ banner:require("../assets/imgs/banner-08.jpg"),
 blog1:require("../assets/imgs/blog-01.jpg"),
 blog2:require("../assets/imgs/blog-02.jpg"),
 blog3:require("../assets/imgs/blog-03.jpg"),
+banner:require("../assets/imgs/banner.webp")
 }
 export default  dataImages
