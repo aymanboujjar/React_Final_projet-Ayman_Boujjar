@@ -1,6 +1,6 @@
 
 import Images from "./images"
-export * as JsonData from "./data"
+import {Data} from "./data"
 
-export { Images }
+export { Images , Data }
 
