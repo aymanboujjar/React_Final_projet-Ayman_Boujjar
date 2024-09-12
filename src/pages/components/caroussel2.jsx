@@ -56,7 +56,7 @@ const Carousel2 = () => {
   return (
     <>
     <div className='mt-10 flex justify-center items-center'>
-      <h1 className='text-4xl font-extrabold mb-3'>FEATURED PRODUCTS</h1>
+      <h1 className='text-4xl font-extrabold mb'>FEATURED PRODUCTS</h1>
     </div>
     <div className="slider-container overflow-hidden ">
       <Slider className='px-10' {...settings}>
