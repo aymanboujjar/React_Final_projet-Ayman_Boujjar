@@ -16,6 +16,9 @@ card3:require("../assets/imgs/cards3.webp"),
 card4:require("../assets/imgs/cards4.webp"),
 card5:require("../assets/imgs/cards5.webp"),
 card6:require("../assets/imgs/cards6.webp"),
-banner:require("../assets/imgs/banner-08.jpg")
+banner:require("../assets/imgs/banner-08.jpg"),
+blog1:require("../assets/imgs/blog-01.jpg"),
+blog2:require("../assets/imgs/blog-02.jpg"),
+blog3:require("../assets/imgs/blog-03.jpg"),
 }
 export default  dataImages
