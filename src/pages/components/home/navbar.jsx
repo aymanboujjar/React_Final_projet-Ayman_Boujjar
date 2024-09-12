@@ -20,9 +20,9 @@ function Navbar() {
           <li className="hover:underline hover:text-black ">About</li>
           <li className="hover:underline hover:text-black ">Contact</li>
         </ul>
-        <div className="flex gap-x-4">
-          <CgProfile />
-          <SlBag />
+        <div className="flex gap-x-6">
+          <CgProfile className="text-2xl" />
+          <SlBag className="text-2xl" />
         </div>
       </div>
     </>

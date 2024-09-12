@@ -1,3 +1,4 @@
 
-export * as people from "../json/people.json"
+import Data from "../json/data.json"
+export{Data}
 
