@@ -16,5 +16,6 @@ card3:require("../assets/imgs/cards3.webp"),
 card4:require("../assets/imgs/cards4.webp"),
 card5:require("../assets/imgs/cards5.webp"),
 card6:require("../assets/imgs/cards6.webp"),
+banner:require("../assets/imgs/banner-08.jpg")
 }
 export default  dataImages
