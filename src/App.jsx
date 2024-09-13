@@ -5,6 +5,7 @@ import Home from "./pages/home";
 import Navbar from "./layouts/navbar";
 import Footer from "./layouts/footer";
 import Shop from "./pages/shop";
+import Shop2 from "./pages/shop2";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
 
       <Route path="/" element={<Home/>} />
       <Route path="/shop" element={<Shop/>} />
+      <Route path="/shop2" element={<Shop2/>} />
     </Routes>
     <Footer/>
     </>

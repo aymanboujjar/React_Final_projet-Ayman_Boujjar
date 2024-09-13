@@ -3,7 +3,7 @@ import { Images } from '../constant';
 import data from "../json/data.json";
 import { useNavigate } from 'react-router-dom';
 
-const Shop = () => {
+const Shop2 = () => {
     const navigate=useNavigate()
     const [selectedDropdownType, setSelectedDropdownType] = useState("All");
     const [selectedCheckboxTypes, setSelectedCheckboxTypes] = useState([]);
@@ -31,7 +31,7 @@ const Shop = () => {
         filteredData = filteredData.filter(product => selectedCheckboxTypes.includes(product.type));
     }
 
-    const limitedData = filteredData.slice(0, 6);
+    const limitedData = filteredData.slice(6, 8);
     const handleSortChange = (e) => {
         setSortOption(e.target.value);
     };
@@ -144,12 +144,12 @@ const Shop = () => {
                 </div>
             
             </div>
-                     <div className='flex items-center justify-center gap-x-9'>
-                    <button className='bg-black text-white rounded-full w-10 p-2 px-4' onClick={()=>navigate("/shop")}>1</button>
-                    <button className=' bg-white text-black hover:bg-black hover:text-white rounded-full w-10 p-2 px-4' onClick={()=>navigate("/shop2")}>2</button>
+                    <div className='flex items-center justify-center gap-x-9'>
+                    <button className=' bg-white text-black hover:bg-black hover:text-white rounded-full w-10 p-2 px-4' onClick={()=>navigate("/shop")}>1</button>
+                    <button className='bg-black text-white rounded-full w-10 p-2 px-4' onClick={()=>navigate("/shop2")}>2</button>
                     </div>
         </>
     );
 };
 
-export default Shop;
+export default Shop2;
