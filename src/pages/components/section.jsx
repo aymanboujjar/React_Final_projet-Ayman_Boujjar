@@ -10,7 +10,7 @@ const Section = () => {
            <div className="relative w-[50%] h-[80vh] overflow-hidden">
   <img
     className="w-full h-full object-cover transform transition-transform duration-500 hover:scale-110"
-    src={Images.banner}
+    src={Images.bannerr}
     alt=""
   />
   <div className="absolute flex flex-col">

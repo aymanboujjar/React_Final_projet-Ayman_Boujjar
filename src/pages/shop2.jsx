@@ -136,7 +136,7 @@ const Shop2 = () => {
                     {limitedData.map((e, i) => (
                         <div key={i} className="p-2 w-[30%]">
                             <img src={Images[e.image]} alt={e.title} className="w-[80%] h-auto" />
-                            <h1>{e.title}</h1>
+                            <h1 className=' cursor-pointer'  onClick={() => { navigate(`/details/${e.id}`) }}>{e.title}</h1>
                             <p>{e.price}</p>
                             <p>{e.type}</p>
                         </div>
