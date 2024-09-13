@@ -43,9 +43,21 @@ const Shop2 = () => {
     }
     return (
         <>
-            <div className='relative mt-5'>
-                <img src={Images.banner} alt="" />
-                <h1 className='absolute bottom-16 left-[40%] text-5xl text-white font-bold'>PRODUCTS</h1>
+              <div
+                className='flex justify-center items-center relative'
+                style={{
+                    backgroundImage: `url(${Images.banner})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    height: '30vh',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            >
+                <div className='absolute inset-0 bg-black opacity-50' ></div>
+
+                <p className='text-[50px] text-white font-bold text-center relative'>
+                    Products
+                </p>
             </div>
 
             <div className='flex gap-x-7 items-center justify-center mt-5'>

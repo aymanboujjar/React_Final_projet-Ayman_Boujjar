@@ -10,10 +10,22 @@ const Blog2 = () => {
 
     return (
         <>
-        <div className='relative mt-5'>
-            <img src={Images.blogbanner} alt="" />
-            <h1 className='absolute bottom-[35%] text-white text-5xl font-bold left-[45%]'>NEWS</h1>
-        </div>
+        <div
+                className='flex justify-center items-center relative'
+                style={{
+                    backgroundImage: `url(${Images.blogbanner})`,
+                    backgroundPosition: 'center',
+                    backgroundSize: 'cover',
+                    height: '30vh',
+                    backgroundRepeat: 'no-repeat',
+                }}
+            >
+                <div className='absolute inset-0 bg-black opacity-50' ></div>
+
+                <p className='text-[50px] text-white font-bold text-center relative'>
+                    News
+                </p>
+            </div>
         <div className='flex justify-center items-start gap-x-20'>
 
         <div className='flex flex-col  justify-around mt-5 w-[60%] gap-y-12'>

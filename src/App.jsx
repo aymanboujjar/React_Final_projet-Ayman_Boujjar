@@ -9,6 +9,8 @@ import Shop2 from "./pages/shop2";
 import Details from "./pages/details";
 import Blog from "./pages/blog";
 import Blog2 from "./pages/blog2";
+import { About } from "./pages/about";
+import { Contact } from "./pages/contact";
 
 function App() {
   return (
@@ -22,6 +24,8 @@ function App() {
       <Route path="/blog" element={<Blog/>} />
       <Route path="/blog2" element={<Blog2/>} />
       <Route path="/details/:id" element={<Details/>} />
+      <Route path="/about" element={<About/>} />
+      <Route path="/contact" element={<Contact/>} />
     </Routes>
     <Footer/>
     </>

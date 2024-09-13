@@ -1,5 +1,5 @@
 import React from 'react';
-import Slider from "react-slick";
+  import Slider from "react-slick";
 import images from "../../constant/images";
 import data from "../../json/data.json";
 import { FaArrowCircleLeft, FaArrowCircleRight } from "react-icons/fa";
