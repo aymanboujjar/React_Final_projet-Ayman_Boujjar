@@ -2,7 +2,7 @@
 import CAroussel from "./components/home/caroussel";
 import Cards from "./components/home/cards";
 import Carousel2 from "./components/caroussel2";
-import Section from "./components/section";
+import Section from "./components/home/section";
 import Blog from "./components/home/blog";
 import LastSection from "./components/home/lastSection";
 

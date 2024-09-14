@@ -56,8 +56,11 @@ const Carousel2 = () => {
   return (
     <>
     <div className='mt-10 flex justify-center items-center'>
-      <h1 className='text-4xl font-extrabold mb'>FEATURED PRODUCTS</h1>
-    </div>
+    <h1 className='text-3xl font-extrabold mb-4 text-center md:text-left'>
+        FEATURED PRODUCTS
+    </h1>
+</div>
+
     <div className="slider-container overflow-hidden ">
       <Slider className='px-10' {...settings}>
         {data.map((e, i) => (

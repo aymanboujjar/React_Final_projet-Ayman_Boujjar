@@ -1,6 +1,6 @@
 import React from 'react';
-import { Images } from '../../constant';
-import Data from "../../json/data.json"
+import Data from "../../../json/data.json"
+import { Images } from '../../../constant';
 const Section = () => {
     const randomIndex = Math.floor(Math.random() * Data.length); 
     const randomElement = Data[randomIndex]; 
