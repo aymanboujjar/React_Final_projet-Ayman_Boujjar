@@ -51,7 +51,7 @@ function Navbar() {
         </ul>
 
         <div className="flex gap-x-6 items-center">
-          <CgProfile onClick={() => navigate("/profile")} className="text-2xl cursor-pointer" />
+          <CgProfile onClick={() => navigate("/signup")} className="text-2xl cursor-pointer" />
           <div className="relative">
             <SlBag
               ref={cartIconRef}

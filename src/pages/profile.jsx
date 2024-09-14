@@ -1,38 +1,76 @@
-import React from 'react';
+import React, { useContext, useState } from 'react';
+import { useCart } from '../context/index';
 import { useNavigate } from 'react-router-dom';
 
-const Profile = () => {
+export const Profile = () => {
     const navigate = useNavigate()
+    const { dataUser} = useCart();
+    console.log("hhhhhhhhhhhhhh", dataUser); 
+
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+
+    const handleLogin = (e) => {
+        e.preventDefault();
+
+        const user = dataUser.find(
+            (ele) => ele.email.trim().toLowerCase() ===  email.trim().toLowerCase() && ele.password === password.trim()
+        );
+
+        if (user) {
+            alert("Login successful!");
+        } else {
+            alert("Invalid email or password. Please try again.");
+        }
+    };
+
     return (
-        <div className='mt-8 flex  items-start justify-center gap-x-5'>
-           <div className='border-2 px-5 w-[32%] py-3 flex flex-col gap-y-5 items-start'>
-            <h1>New Customer</h1>
-            <p>Register Account</p>
-            <p>By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.</p>
-            <button onClick={()=>navigate("/signup")} className='bg-black text-white px-8 py-2 cursor-pointer'>continue</button>
-            </div> 
-           <div className='border-2 px-5  py-3 flex flex-col gap-y-5 items-start'>
-            <h1>Returning Customer</h1>
-            <p>I am a returning customer</p>
-            <form>
-            <div className='flex flex-col gap-y-2'>
-            <label htmlFor="email">email</label>
-            <input type="email"  id="email" placeholder="email" class=" border-2  rounded-md  bg-white py-3 px-6 text-base font-medium text-[#757c82] outline-none   w-[40vw]"/>
+        <div>
+
+            <div className='flex bgdiv gap-9 pt-[22vh] pb-[7vh] ml-20'>
+                <div className='flex flex-col gap-4 border border-[#888888] p-4'>
+                    <p className='text-[40px]'>New Customer</p>
+                    <p className='text-[20px] text-[#888888] font-semibold'>Register Account</p>
+                    <p className='text-[#888888] w-[40vw]'>
+                        By creating an account you will be able to shop faster, be up to date on an order's status, and keep track of the orders you have previously made.
+                    </p>
+                    <button onClick={() => { navigate(`/signup`) }} className='bg-black text-white p-3 w-36'>CONTINUE</button>
+                </div>
+
+                <div className='border border-[#888888] p-4'>
+                    <p className='text-[40px]'>Returning Customer</p>
+                    <p className='text-[20px] text-[#888888] font-semibold'>I am a returning customer</p>
+
+                    <form onSubmit={handleLogin} className='flex flex-col gap-2'>
+                        <label htmlFor="email">Email</label>
+                        <input 
+                            value={email}
+                            onChange={(e) => setEmail(e.target.value)} 
+                            type="email" 
+                            placeholder='Email' 
+                            className='text-[#888888] w-[40vw]' 
+                            required
+                        />
+                        <label htmlFor="password">Password</label>
+                        <input 
+                            value={password}
+                            onChange={(e) => setPassword(e.target.value)} 
+                            type="password" 
+                            placeholder='Password' 
+                            className='text-[#888888]' 
+                            required
+                        />
+
+                        <p className='text-[#616060] hover:text-[#e65540] cursor-pointer'>Forgot your password?</p>
+
+                        <div className='flex gap-3'>
+                            <button type="submit" className=' text-white bg-black p-3 w-32'>SIGN IN</button>
+                            <button className='text-[#616060] hover:text-[#e65540]'>or Return to Store</button>
+                        </div>
+                    </form>
+                </div>
             </div>
-            <div className='flex flex-col gap-y-2'>
-            <label htmlFor="password">password</label>
-            <input type="password"  id="password" placeholder="password" class=" border-2  rounded-md   bg-white py-3 px-6 text-base font-medium text-[#757c82] outline-none   w-[40vw]"/>
-            </div>
-            <p className='mb-4 cursor-pointer'>forget your password?</p>
-            <div className='flex items-center gap-x-4 '>
-                <button className='bg-black text-white px-8 py-2'>Sign in </button>
-                <p className=' cursor-pointer'>or Return to Store</p>
-            </div>
-            </form>
-            </div> 
-            
+
         </div>
     );
 };
-
-export default Profile;

@@ -11,8 +11,8 @@ import Blog from "./pages/blog";
 import Blog2 from "./pages/blog2";
 import { About } from "./pages/about";
 import { Contact } from "./pages/contact";
-import Profile from "./pages/profile";
-import Signup from "./pages/signup";
+import { Profile } from "./pages/profile";
+import { Signup } from "./pages/signup";
 
 function App() {
   return (
